@@ -6,6 +6,7 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -16,6 +17,7 @@ const config: Config = {
         light: '#f5f5f5',
         primary: '#337CCF', // 240,86,199
         primaryDark: '#1450A3', // 80,230,217
+        darkBody: '#0F0F0F',
       },
     },
   },
