@@ -5,16 +5,16 @@ import Link from 'next/link'
 
 export default function Navbar() {
   return (
-    <nav className='flex flex-col px-2 md:px-4 lg:px-28 pt-4 gap-2 bg-white dark:bg-darkBody'>
+    <nav className='flex flex-col px-2 md:px-4 lg:px-28 pt-4 lg:gap-2 bg-white dark:bg-darkBody'>
       <div className='flex flex-row gap-8 items-center'>
         <Link href={'/'}>
           <h1 className='text-dark dark:text-light text-4xl font-bold'>INKAR</h1>
         </Link>
-        <div className='flex items-center flex-1 relative border border-dark dark:border-light h-12 rounded-lg gap-2'>
-          <p className='text-dark dark:text-white px-2 border-r border-dark dark:border-white'>Cari Artikel</p>
+        <div className='flex items-center flex-1 relative border border-dark dark:border-light h-8 lg:h-12 rounded-lg gap-2'>
+          <p className='text-dark dark:text-white px-2 border-r border-dark dark:border-white text-sm lg:text-base'>Cari Artikel</p>
           <input
             type="text"
-            className='h-full flex-1 bg-white dark:bg-darkBody text-darkBody dark:text-white mr-1 outline-none'
+            className='h-full flex-1 bg-white dark:bg-darkBody text-darkBody dark:text-white mr-1 outline-none text-sm lg:text-base'
             placeholder='Prabowo Bilang Begini...'
             autoComplete='off'
           />
@@ -31,7 +31,7 @@ export default function Navbar() {
             </div>
             <p className='text-sm text-darkBody dark:text-white'>Kategori</p>
           </div>
-          <div tabIndex={0} className="dropdown-content z-[1] card card-compact w-[60vw] h-[35vw] mt-2 p-2 shadow bg-primary text-primary-content">
+          <div tabIndex={0} className="dropdown-content z-[1] w-[80vw] h-[35vw] mt-2 p-2 bg-white shadow rounded-b-md">
             <div className="card-body">
               <h3 className="card-title">Card title!</h3>
               <p>you can use any element as a dropdown.</p>
