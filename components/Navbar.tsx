@@ -2,6 +2,7 @@
 import React from 'react'
 import Tag from './Tag'
 import Link from 'next/link'
+import IconSearch from './icon/IconSearch'
 
 export default function Navbar() {
   return (
@@ -18,6 +19,9 @@ export default function Navbar() {
             placeholder='Prabowo Bilang Begini...'
             autoComplete='off'
           />
+          <div className='pr-2'>
+            <IconSearch width={26} height={26} className='fill-dark dark:fill-light' />
+          </div>
         </div>
       </div>
       <div className='flex items-center gap-12'>

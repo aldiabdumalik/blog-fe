@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 export default function Footer() {
@@ -12,15 +13,24 @@ export default function Footer() {
         </div>
         <div className="flex flex-col flex-1 gap-2">
           <h2 className='text-2xl text-darkBody font-bold'>Hubungi Kami</h2>
-          <p className='text-sm text-darkBody'>Kirim Pesan</p>
-          <p className='text-sm text-darkBody'>WhatsApp</p>
-          <p className='text-sm text-darkBody'>hi@inkar.com</p>
+          <div className="flex items-center gap-2">
+            <Image src={'/assets/icon/dark/whatsapp.svg'} width={18} height={18} alt='icon-footer' />
+            <p className='text-sm text-darkBody'>Kirim Pesan</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={'/assets/icon/dark/whatsapp.svg'} width={18} height={18} alt='icon-footer' />
+            <p className='text-sm text-darkBody'>Whatsaap</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Image src={'/assets/icon/dark/email.svg'} width={18} height={18} alt='icon-footer' />
+            <p className='text-sm text-darkBody'>hi@inkar.com</p>
+          </div>
         </div>
         <div className="flex flex-col flex-1 gap-2">
           <h2 className='text-2xl text-darkBody font-bold'>Tautan</h2>
           <p className='text-sm text-darkBody'>About</p>
           <p className='text-sm text-darkBody'>Privacy Policy</p>
-          <p className='text-sm text-darkBody'>hi@inkar.com</p>
+          <p className='text-sm text-darkBody'>Terms of Service</p>
         </div>
       </div>
       <div className="flex w-full justify-start">
