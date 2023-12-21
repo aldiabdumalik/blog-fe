@@ -3,6 +3,7 @@ import React from 'react'
 import Tag from './Tag'
 import Link from 'next/link'
 import IconSearch from './icon/IconSearch'
+import ProductCard from './Card/ProductCard'
 
 export default function Navbar() {
   return (
@@ -35,10 +36,34 @@ export default function Navbar() {
             </div>
             <p className='text-sm text-darkBody dark:text-white'>Kategori</p>
           </div>
-          <div tabIndex={0} className="dropdown-content z-[1] w-[80vw] h-[35vw] mt-2 p-2 bg-white shadow rounded-b-md">
-            <div className="card-body">
-              <h3 className="card-title">Card title!</h3>
-              <p>you can use any element as a dropdown.</p>
+          <div tabIndex={0} className="dropdown-content z-[1] w-[80vw] min-h-[35vw] max-h-[35vw] mt-2 p-2 bg-white shadow rounded-b-md overflow-y-scroll">
+            <div className='flex py-6 px-4'>
+              <div className="flex flex-col w-40 pr-4 gap-6">
+                <Link href={'/'}
+                  className='flex justify-center px-4 py-2 border rounded-md'
+                >
+                  <p className='text-md text-darkBody font-semibold'>Teknologi</p>
+                </Link>
+                <Link href={'/'}
+                  className='flex justify-center px-4 py-2 border rounded-md'
+                >
+                  <p className='text-md text-darkBody font-semibold'>Teknologi</p>
+                </Link>
+                <Link href={'/'}
+                  className='flex justify-center px-4 py-2 border rounded-md'
+                >
+                  <p className='text-md text-darkBody font-semibold'>Teknologi</p>
+                </Link>
+
+              </div>
+              <div className="flex-1 grid grid-cols-3 gap-2">
+                <ProductCard desc={false} />
+                <ProductCard desc={false} />
+                <ProductCard desc={false} />
+                <ProductCard desc={false} />
+                <ProductCard desc={false} />
+                <ProductCard desc={false} />
+              </div>
             </div>
           </div>
         </div>

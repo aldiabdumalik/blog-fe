@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import Tag from '../Tag'
 
-export default function ProductCard() {
+export default function ProductCard({ desc = true }: { desc?: boolean }) {
   return (
     <div className='flex flex-col w-full bg-white p-2 rounded-xl shadow-md gap-2'>
       <Link href={'/'} className='flex flex-col rounded-md overflow-hidden relative'>
@@ -22,7 +22,9 @@ export default function ProductCard() {
         <Link href={'/'}>
           <h4 className='text-darkBody dark:text-white text-md'>Lorem ipsum dolor, sit amet consectetur adipisicing elit</h4>
         </Link>
-        <p className='text-[#777] text-xs'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam consectetur fugiat...</p>
+        {desc && (
+          <p className='text-[#777] text-xs'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam consectetur fugiat...</p>
+        )}
         <div className='flex justify-end'>
           <p className='text-[#777] text-[10px]'>20 April 2024 13:00 WIB</p>
         </div>
